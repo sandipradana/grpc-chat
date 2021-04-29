@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/sandipradana/grpc-chat/model";
+
+package model;
+
+message Message {
+  string body = 2;
+}
+
+service ChatService {
+  rpc Send(Message) returns (Message) {}
+}
